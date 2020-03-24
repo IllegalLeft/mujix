@@ -1,0 +1,8 @@
+[objects]
+main.o
+
+[libraries]
+bank 0 slot 0 music.lib
+
+[ramsections]
+bank 0 slot 2 "MusicVars"

@@ -1,5 +1,3 @@
-.INCLUDE "header.i"
-
 .SECTION "MusicData" FREE
 
 Instruments:

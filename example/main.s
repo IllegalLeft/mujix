@@ -12,6 +12,7 @@
 
 .INCLUDE "gb_hardware.i"
 .INCLUDE "header.i"
+.INCLUDE "songs.i"
 
 ;==============================================================================
 ; INTERRUPTS

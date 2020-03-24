@@ -8,13 +8,12 @@
 ;==============================================================================
 
 .INCLUDE "gb_hardware.i"
-.INCLUDE "header.i"
 
 ;==============================================================================
 ; WRAM DEFINITIONS
 ;==============================================================================
 
-.RAMSECTION "MusicVars" SLOT 2 ; Internal WRAM
+.RAMSECTION "MusicVars" ; Internal WRAM
     MusicTicks:		db
     MusicTickLimit:	db
     MusicPointer:	dsw 4
@@ -27,7 +26,6 @@
 ;==============================================================================
 ; SUBROUTINES
 ;==============================================================================
-.BANK 0
 .SECTION "MusicSubroutines" FREE
 
 LoadWaveform:
