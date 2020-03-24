@@ -185,6 +185,26 @@ DMACopy:
 
 .ENDS
 
+.SECTION "BankRoutines" FREE
+BankMode:
+    ; a	    bank mode - $00 ROM, $01 RAM
+    ld hl, $6000
+    ld (hl), a
+    ret
+
+RAMEnable:
+    ; a	    enable/disable
+    ld hl, $0000
+    ld (hl), a
+    ret
+
+SwitchBank:
+    ; a	    new bank
+    ld hl, $2000
+    ld (hl), a
+    ret
+.ENDS
+
 ;==============================================================================
 ; START
 ;==============================================================================
@@ -218,6 +238,10 @@ Start:
     ldh (R_OBP0), a
 
     call DMACopy ; set up DMA subroutine
+
+    ; switch banks
+    ld a, 3
+    call SwitchBank
 
     ; Load waveform
     ld hl, WaveRamp

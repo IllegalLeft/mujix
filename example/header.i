@@ -4,7 +4,7 @@
 
 .GBHEADER
     NAME "MUSIC DEMO"
-    CARTRIDGETYPE $00	    ; RAM only
+    CARTRIDGETYPE $01	    ; MBC1
     RAMSIZE $00		    ; 32KByte, no ROM banking
     COUNTRYCODE $01	    ; outside Japan
     NINTENDOLOGO
@@ -22,6 +22,6 @@
 .ENDME
 
 .ROMBANKSIZE $4000
-.ROMBANKS 2
+.ROMBANKS 4
 
 ; vim: filetype=wla
